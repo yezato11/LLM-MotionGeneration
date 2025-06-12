@@ -22,7 +22,7 @@ Each method uses Large Language Models (LLMs) to generate co-speech motions in a
 The prompt used in LLM-GPA is composed of three main components: context, instruction, and a list of actions. The context outlines a task in which the LLM is employed to control a robot's movements. The instructions—developed through Chain-of-Thought (CoT) reasoning—guide the LLM through the task step by step: starting with sentence segmentation, followed by gesture description, assigning actions to individual body parts to form complete gestures, and finally, checking for consistency and fluidity. These individual gestures can then be assembled into a full motion sequence. An example prompt from LLM-GPA is provided below.
 </p>
 
-## 🟩 LLM-GJA: Generating Joint Angles
+## 🟦 LLM-GJA: Generating Joint Angles
 <p align="justify">
 In contrast, LLM for Generating Joint Angle Parameters (LLM-GJA) employs the LLM to determine the robot’s servo joint angles. This is done by designing a prompt that includes the context, servo specifications, and a set of instructions. The context is typically shared between both LLM-GPA and LLM-GJA. The servo specifications outline the mapping of servos, their rotational limits, and movement directions. While the instructions are generally derived using the same Chain-of-Thought method as in LLM-GPA, the key difference is that the described gestures are translated into specific servo angles required to produce motions. An example prompt for LLM-GJA is provided below.
 </p>
